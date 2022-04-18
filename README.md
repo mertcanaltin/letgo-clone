@@ -1,8 +1,8 @@
 ![](https://classic-assets.eascdn.net/~assets/646e25baeb5ede1b3e6d0f2a92bc3544)
 ### Features
 
-- homepage top banner and main logo area :tw-2705:
-- category slider made :tw-2705:
+- homepage top banner and main logo area ✔️
+- category slider made ✔️
 
 
 ### Tasks
