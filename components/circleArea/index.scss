@@ -1,0 +1,30 @@
+.container {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.square {
+  width: 100px;
+  height: 130px;
+  
+  margin: 9px;
+  border-radius: 10%;
+
+  &One {
+    background-color: #6bcebb;
+  }
+  &Two {
+    background-color: #a3ce71;
+  }
+  &Tree {
+    background-color: #327fb6;
+  }
+  &Four {
+    background-color: orange;
+  }
+  &Five {
+    background-color: aquamarine;
+  }
+}

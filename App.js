@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+import { setStatusBarStyle, StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   StyleSheet,
@@ -6,18 +6,20 @@ import {
   View,
   TextInput,
   Button,
+  SafeAreaView,
+  ScrollView,
   Image,
   Pressable,
 } from "react-native";
 import Svg, { Path } from "react-native-svg";
-
+import CircleArea from "./components/circleArea";
 import Style from "./App.scss";
 
 export default function App(props) {
   const [text, onChangeText] = React.useState("Useless Text");
   const [number, onChangeNumber] = React.useState(null);
   return (
-    <View style={Style.container}>
+    <SafeAreaView style={Style.container}>
       <Svg
         width={65}
         height={42}
@@ -39,30 +41,37 @@ export default function App(props) {
         keyboardType="text"
       />
 
-      <View style={{ flex: 1 }}>
-        <Image
-          source={{
-            uri: "https://i.ibb.co/Ht50b44/Ekran-Resmi-2022-04-16-12-00-18.png",
-          }}
-          style={{
-            width: 350,
-            height: 300,
-            borderRadius: 20,
-            borderColor: "red",
-            borderWidth: 2,
-          }}
-        />
-      </View>
+      <ScrollView>
+        <View style={{ flex: 1 }}>
+          <Image
+            source={{
+              uri: "https://i.ibb.co/Ht50b44/Ekran-Resmi-2022-04-16-12-00-18.png",
+            }}
+            style={[Style.imgMain,{
+             
 
-      <View style={{ flex: 2 }}></View>
-      <View style={{ flex: 3 }}>
-        <Text style={Style.text} numberOfLines={5}>
-          Kullanmadığın eşyaları sat, çevrendeki fırsatları keşfet!
-        </Text>
-      </View>
-      <Pressable style={Style.buttonPink}>
-        <Text style={Style.textWhite}>Eşyalarını sat</Text>
-      </Pressable>
-    </View>
+              width: 350,
+              height: 300,
+              borderRadius: 20,
+              borderColor: "red",
+              borderWidth: 2,
+            }]}
+          />
+        </View>
+
+        <View style={Style.circleArea}>
+          <Text style={Style.text} numberOfLines={5}>
+            Kullanmadığın eşyaları sat, çevrendeki fırsatları keşfet!
+          </Text>
+          <CircleArea />
+        </View>
+
+        <View style={{marginTop:40}}>
+          <Pressable style={Style.buttonPink}>
+            <Text style={Style.textWhite}>Eşyalarını sat</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
