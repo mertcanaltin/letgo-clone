@@ -4,6 +4,10 @@
   justify-content: center;
   flex-direction: row;
 }
+.svg {
+
+}
+
 
 .square {
   width: 100px;
@@ -26,5 +30,13 @@
   }
   &Five {
     background-color: aquamarine;
+  }
+
+  &Text {
+    margin: 0px;
+    color:white;
+    text-align: center;
+    top: 52px;
+   
   }
 }
